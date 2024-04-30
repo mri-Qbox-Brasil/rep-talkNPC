@@ -63,7 +63,7 @@ const App: React.FC = () => {
               <Box className="descriptions">
                 <Text
                   fz="lg"
-                  fw="bold"
+                  fw="light"
                   color="white"
                   className="drop-shadow-md"
                 >
@@ -76,7 +76,7 @@ const App: React.FC = () => {
                     <Paper
                       p={"md"}
                       radius={"sm"}
-                      bg={isHovered === index ? primaryColor : "white"}
+                      bg={isHovered === index ? primaryColor : "gray.9"}
                       c={isHovered === index ? "white" : "black"}
                       style={{
                         transition: "all 0.2s ease",
@@ -86,7 +86,7 @@ const App: React.FC = () => {
                       onClick={() => fetchNui("click", index)}
                       key={ele.label}
                     >
-                      <Title order={5} fw="bold" style={{ textShadow: "none" }}>
+                      <Title order={5} fw="normal" style={{ textShadow: "none" }}>
                         {ele.label}
                       </Title>
                     </Paper>

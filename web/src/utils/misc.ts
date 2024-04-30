@@ -16,7 +16,7 @@ export const debugShow = () => {
     {
       action: "show",
       data: {
-        npcColor: "red",
+        npcColor: "green",
         npcName: "Rep Scripts",
         npcTag: "Construction Worker",
         msg: "Hello, my name is Chip Peterson! \n \n I'm in charge of the site, how can I help you?",
