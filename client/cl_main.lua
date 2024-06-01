@@ -55,7 +55,7 @@ local function CreateNPC(_pedData, _elements)
     end
     local ped = CreatePed(0, GetHashKey(_pedData.npc), _pedData.coords.x, _pedData.coords.y, _pedData.coords.z,
         _pedData.coords.w, false, true)
-    SetEntityHeading(ped, _pedData.coords.w)
+    SetEntityHeading(ped, _pedData.heading)
     SetPedFleeAttributes(ped, 0, 0)
     SetPedDiesWhenInjured(ped, false)
     SetPedKeepTask(ped, true)
