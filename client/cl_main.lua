@@ -78,7 +78,7 @@ local function CreateNPC(_pedData, _elements)
             {
                 name = Config.Talk:format(_pedData.name),
                 label = Config.Talk:format(_pedData.name),
-                icon = "fas fa-user-friends",
+                icon = "fa-solid fa-comments",
                 onSelect = function(data)
                     talkNPC(data.entity)
                 end,
@@ -90,7 +90,7 @@ local function CreateNPC(_pedData, _elements)
                 action = function(entity)
                     talkNPC(entity)
                 end,
-                icon = "fas fa-user-friends",
+                icon = "fa-solid fa-comments",
                 label = Config.Talk:format(_pedData.name)
             } },
             distance = 3.0
