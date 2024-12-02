@@ -1,53 +1,53 @@
-RegisterCommand("testnpc", function()
-    local coords = GetEntityCoords(PlayerPedId()) - vector3(0.5, 0.5, 1.0)
-    local npc = exports['rep-talkNPC']:CreateNPC({
-        npc = 'u_m_y_abner',
-        coords = vector4(coords.x, coords.y, coords.z, 0.0),
-        name = 'Rep Scripts',
-        animName = "mini@strip_club@idles@bouncer@base",
-        animDist = "base",
-        tag = "Bot",
-        color = "blue.7",
-        startMSG = 'Hello, I am the Rep Scripts Bot'
-    }, {
-        [1] = {
-            label = "What is Rep Scripts?",
-            shouldClose = false,
-            action = function()
-                exports['rep-talkNPC']:updateMessage("It is a team that creates scripts for FiveM")
-            end
-        },
-        [2] = {
-            label = "What categories of scripts do you have?",
-            shouldClose = false,
-            action = function()
-                exports['rep-talkNPC']:changeDialog("We have clean and dirty jobs, which one do you want to choose?",
-                    {
-                        [1] = {
-                            label = "Clean jobs",
-                            shouldClose = true,
-                            action = function()
-                            end
-                        },
-                        [2] = {
-                            label = "Dirty jobs",
-                            shouldClose = true,
-                            action = function()
-                            end
-                        }
-                    }
-                )
-            end
-        },
-        [3] = {
-            label = "Goodbye",
-            shouldClose = true,
-            action = function()
-                TriggerEvent('rep-talkNPC:client:close')
-            end
-        }
-    })
-end)
+-- RegisterCommand("testnpc", function()
+--     local coords = GetEntityCoords(PlayerPedId()) - vector3(0.5, 0.5, 1.0)
+--     local npc = exports['rep-talkNPC']:CreateNPC({
+--         npc = 'u_m_y_abner',
+--         coords = vector4(coords.x, coords.y, coords.z, 0.0),
+--         name = 'Rep Scripts',
+--         animName = "mini@strip_club@idles@bouncer@base",
+--         animDist = "base",
+--         tag = "Bot",
+--         color = "blue.7",
+--         startMSG = 'Hello, I am the Rep Scripts Bot'
+--     }, {
+--         [1] = {
+--             label = "What is Rep Scripts?",
+--             shouldClose = false,
+--             action = function()
+--                 exports['rep-talkNPC']:updateMessage("It is a team that creates scripts for FiveM")
+--             end
+--         },
+--         [2] = {
+--             label = "What categories of scripts do you have?",
+--             shouldClose = false,
+--             action = function()
+--                 exports['rep-talkNPC']:changeDialog("We have clean and dirty jobs, which one do you want to choose?",
+--                     {
+--                         [1] = {
+--                             label = "Clean jobs",
+--                             shouldClose = true,
+--                             action = function()
+--                             end
+--                         },
+--                         [2] = {
+--                             label = "Dirty jobs",
+--                             shouldClose = true,
+--                             action = function()
+--                             end
+--                         }
+--                     }
+--                 )
+--             end
+--         },
+--         [3] = {
+--             label = "Goodbye",
+--             shouldClose = true,
+--             action = function()
+--                 TriggerEvent('rep-talkNPC:client:close')
+--             end
+--         }
+--     })
+-- end, false)
 
 
 -- below is what we used in the featured video for our sanitation job
